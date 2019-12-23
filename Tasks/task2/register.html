@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       
+    </head>
+    <body>
+        <div class="container">
+            <table border="3" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">
+                            REGISTRATION PAGE
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+               <td> NAME:</td><td><input id="txtusername" placeholder="Enter your Name" required pattern="^[a-z A-Z 0-9 _ .]{5,15}$"/></td>
+                </tr>
+                <tr>
+                <td> ADDRESS:</td><td><textarea name="" id="txtaddress" cols="20" rows="5" placeholder="enter your address"></textarea></td>
+               </tr>
+                <tr>
+                <td>EMAIL ID:</td><td><input id="txtemailid" placeholder="enter email id" type="email" required pattern="^[a-z A-Z 0-9 _ .]{5,15}[@][a-z A-Z]{4,9}[.][a-z A-Z]{2,3}$" ></td>
+                </tr>
+                <tr>
+                <td>PASSWORD:</td><td><input id="txtpassword" placeholder="enter your password" type="password" required pattern="^[a-z A-Z $ @ ! . _]{7,16}"></td>
+                </tr>
+                <tr>
+                    <td>MOBILE NUMBER:</td><td><input id="txtnumber" placeholder="enter your number" type="text" required pattern="^[6-9][0-9]{9}"></td>
+                    </tr>
+                <tr>
+                <td>GENDER:</td><td><input id="txtgender" type="radio" name="gender">MALE
+                <input id="txtgender" type="radio" name="gender">FEMALE </td>
+                </tr>
+                <tr>
+                <td> AGE:</td><td><input type="range" minlength="18" maxlength="25" step="1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="SUBMIT">
+                        <input type="button" value="RESET">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </body>
+</html>
