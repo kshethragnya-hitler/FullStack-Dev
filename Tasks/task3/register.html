@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            innerHTML{
+                color: red;}
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       <script type="text/JavaScript">
+        function validate() {
+            var x1=document.getElementById("txtusername");        //username
+            var x2=document.getElementById("txtemailid");          //email id
+            var x3=document.getElementById("txtpassword");        //password     
+            var u_p=RegExp("^[a-z A-Z 0-9 _ .]{5,15}$");    //pattern validation for username
+            var e_p=RegExp("^[a-z A-Z 0-9 _ .]{5,15}[@][a-z A-Z]{4,9}[.][a-z A-Z]{2,3}$");  //pattern validation for email
+            var p_p=RegExp("(?=.*\d)(?=.[_.$!@])(?=.*[a-z]).{6,12}");              //pattern validation for password
+            if(u_p.test(x1.value))
+            {
+                if(e_p.test(x2.value))
+                {
+                    if(p_p.test(x3.value))
+                    {
+                        
+                    }
+                    else
+                    {
+                        document.getElementById("errpass").innerHTML="password error";
+                    }
+                }
+                else{
+                    document.getElementById("erremail").innerHTML="email error";
+                }
+            
+             }
+             else{
+                document.getElementById("erruser").innerHTML="username error";
+               
+             }
+        } 
+       </script>
+      
+    </head>
+    <body>
+        <div class="container">
+            <table border="3" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">
+                            REGISTRATION PAGE
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+               <td> NAME:</td><td><input id="txtusername" placeholder="Enter your Name" ><span id="erruser"></span></td>
+                </tr>
+                <tr>
+                <td> ADDRESS:</td><td><textarea name="" id="txtaddress" cols="20" rows="5" placeholder="enter your address"></textarea></td>
+               </tr>
+                <tr>
+                <td>EMAIL ID:</td><td><input id="txtemailid" placeholder="enter email id" ><span id="erremail"></span></td>
+                </tr>
+                <tr>
+                <td>PASSWORD:</td><td><input id="txtpassword" placeholder="enter your password" type="password"> <span id="errpass"></span></td>
+                </tr>
+                <tr>
+                    <td>MOBILE NUMBER:</td><td><input id="txtnumber" placeholder="enter your number" type="text" required pattern="^[6-9][0-9]{9}"></td>
+                    </tr>
+                <tr>
+                <td>GENDER:</td><td><input id="txtgender" type="radio" name="gender">MALE
+                <input id="txtgender" type="radio" name="gender">FEMALE </td>
+                </tr>
+                <tr>
+                <td> AGE:</td><td><input type="range" minlength="18" maxlength="25" step="1"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="SUBMIT" onclick="validate()">
+                        <input type="button" value="RESET">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </body>
+</html>
