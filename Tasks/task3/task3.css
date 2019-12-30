@@ -1,25 +1,28 @@
 .a11{
-    float: left;
-    margin-left: -200px;
+   /* float: left;*/
+   /* margin-left: -200px;*/
     margin-top: 10px;
 }
 .a12{
-   margin-top: 10px;
-    margin-left: -50px;
+  /* margin-top: 10px;*/
+    /*margin-left: -50px;*/
 }
 .a13{
     margin-top: 10px;
 }
 .a14{
     margin-top: 10px;
-    margin-left: 250px;
+    /*margin-left: 250px;*/
     float:left;
 }
 .a15{
     
     margin-top: 10px;
-    margin-left:400px;
+ /*   margin-left:400px;*/
 }
 .p1{
-    margin-left:80px;
+   /* margin-left:80px; */
+}
+.c{
+width: 1330px;
 }
